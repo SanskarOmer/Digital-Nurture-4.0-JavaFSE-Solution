@@ -1,43 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Local Community Event Portal</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Community Event Portal</title>
 
-<body>
-  <!-- Navigation -->
-  <nav>
-   <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#events">Events</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="help.html" target="_blank">Help</a></li>
-    </ul>
-  </nav>
+    <style>
+      #welcomeBanner {
+        background-color: #004080;
+        color: #ffffff;
+        font-weight: bold;
+        padding: 25px;
+        text-align: center;
+        font-size: 1.6em;
+      }
 
-  <!-- Main -->
-  <main>
-        <section id="home">
-      <h1>Hello, World!!!</h1>
-      <p>Welcome to Local Community Event Portal</p>
-    </section>
+      .highlight {
+        background-color: #ffeb3b;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-weight: bold;
+        color: #000;
+      }
+    </style>
+  </head>
 
-    <section id="events">
-      <h2>Upcoming Events</h2>
-      <p>Stay tuned for our latest events.</p>
-    </section>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="help.html" target="_blank">Help</a></li>
+      </ul>
+    </nav>
 
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>You can reach us via email or phone.</p>
-    </section>
-  </main>
+    <div id="welcomeBanner">
+      Welcome back, <span class="highlight">Community Member!</span>
+      <br />
+      <span style="color: #d32f2f; font-weight: bold"
+        >Don't miss: Free entry to the Neighborhood Picnic this Saturday!</span
+      >
+    </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Local Community Event Portal</p>
-  </footer>
-</body>
+    <!-- Main -->
+    <main>
+      <section id="home">
+        <h1>Hello, World!!!</h1>
+        <p>Welcome to Local Community Event Portal</p>
+      </section>
+
+      <section id="events">
+        <h2>Upcoming Events</h2>
+        <p>Stay tuned for our latest events.</p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>You can reach us via email or phone.</p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Local Community Event Portal</p>
+    </footer>
+  </body>
 </html>
