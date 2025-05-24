@@ -119,3 +119,24 @@ output {
   margin-top: 10px;
   text-align: center;
 }
+
+#feedbackForm {
+  background-color: #eef3f7;
+  padding: 20px;
+  border: 1px solid #ccd;
+  border-radius: 8px;
+  margin: 30px auto;
+  max-width: 500px;
+}
+
+#feeDisplay,
+#confirmationText {
+  color: #004080;
+  font-weight: bold;
+}
+
+#eventImg {
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
