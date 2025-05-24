@@ -87,6 +87,58 @@
         </form>
       </section>
 
+      <section id="feedback">
+        <h2>Event Feedback</h2>
+        <form id="feedbackForm">
+          <label for="phone">Phone Number:</label><br />
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            placeholder="e.g. 1234567890"
+            onblur="validatePhone()"
+            required
+          /><br /><br />
+
+          <label for="eventSelect">Select Event:</label><br />
+          <select id="eventSelect" onchange="showFee()">
+            <option value="">--Choose Event--</option>
+            <option value="picnic">Community Picnic</option>
+            <option value="run">Charity Run</option>
+            <option value="fair">Art Fair</option>
+          </select>
+          <p id="feeDisplay"></p>
+          <br />
+
+          <label for="
+          dback">Your Feedback:</label><br />
+          <textarea
+            id="feedbackText"
+            onkeyup="countChars()"
+            rows="4"
+            cols="40"
+            placeholder="Write your feedback..."
+          ></textarea>
+          <p>Characters: <span id="charCount">0</span></p>
+          <br />
+
+          <button type="button" onclick="showFeedbackConfirmation()">
+            Submit Feedback
+          </button>
+          <p id="confirmationText"></p>
+        </form>
+
+        <h3>Event Moment</h3>
+        <img
+          src="event.jpg"
+          alt="Event photo"
+          id="eventImg"
+          title="Double-click to enlarge"
+          ondblclick="enlargeImage()"
+          style="max-width: 200px; border: 1px solid #ccc; border-radius: 4px"
+        />
+      </section>
+
       <section id="contact">
         <h2>Contact Us</h2>
         <p>You can reach us via email or phone.</p>
