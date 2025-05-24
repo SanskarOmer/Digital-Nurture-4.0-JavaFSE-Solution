@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Local Community Event Portal</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -36,6 +36,55 @@
       <section id="events">
         <h2>Upcoming Events</h2>
         <p>Stay tuned for our latest events.</p>
+      </section>
+
+      <section id="registration">
+        <h2>Register for an Event</h2>
+        <form id="eventForm" onsubmit="handleSubmit(event)">
+          <label for="name">Full Name:</label><br />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your full name"
+            required
+            autofocus
+          /><br /><br />
+
+          <label for="email">Email:</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="your@email.com"
+            required
+          /><br /><br />
+
+          <label for="date">Select Date:</label><br />
+          <input type="date" id="date" name="date" required /><br /><br />
+
+          <label for="eventType">Choose Event:</label><br />
+          <select id="eventType" name="eventType" required>
+            <option value="">--Select--</option>
+            <option value="picnic">Community Picnic</option>
+            <option value="run">Charity Run</option>
+            <option value="fair">Art Fair</option></select
+          ><br /><br />
+
+          <label for="message">Message (optional):</label><br />
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            cols="40"
+            placeholder="Any special requests or comments?"
+          ></textarea
+          ><br /><br />
+
+          <button type="submit">Register</button>
+          <br /><br />
+          <output id="confirmationMessage"></output>
+        </form>
       </section>
 
       <section id="contact">
@@ -83,5 +132,7 @@
     <footer>
       <p>© 2025 Local Community Event Portal</p>
     </footer>
+
+    <script src="main.js"></script>
   </body>
 </html>
