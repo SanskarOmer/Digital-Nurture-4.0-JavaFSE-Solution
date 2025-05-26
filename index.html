@@ -21,9 +21,9 @@
     <div id="welcomeBanner">
       Welcome back, <span class="highlight">Community Member!</span>
       <br />
-      <span style="color: #d32f2f; font-weight: bold"
-        >Don't miss: Free entry to the Neighborhood Picnic this Saturday!</span
-      >
+      <span style="color: #d32f2f; font-weight: bold">
+        Don't miss: Free entry to the Neighborhood Picnic this Saturday!
+      </span>
     </div>
 
     <!-- Main -->
@@ -36,6 +36,7 @@
       <section id="events">
         <h2>Upcoming Events</h2>
         <p>Stay tuned for our latest events.</p>
+        <!-- JS will dynamically add events here -->
       </section>
 
       <section id="registration">
@@ -110,16 +111,11 @@
           <p id="feeDisplay"></p>
           <br />
 
-          <!-- 🆕 Clear Preferences Button -->
           <button type="button" onclick="clearPreferences()">
-            Clear Preferences
-          </button>
+            Clear Preferences</button
+          ><br /><br />
 
-          <label
-            for="
-          dback"
-            >Your Feedback:</label
-          ><br />
+          <label for="feedbackText">Your Feedback:</label><br />
           <textarea
             id="feedbackText"
             onkeyup="countChars()"
@@ -187,6 +183,7 @@
         </tr>
       </table>
     </main>
+
     <section id="videoInvite">
       <h2>You're Invited!</h2>
       <video
