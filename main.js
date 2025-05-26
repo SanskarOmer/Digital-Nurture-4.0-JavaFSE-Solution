@@ -54,3 +54,39 @@ function countChars() {
     const text = document.getElementById("feedbackText").value;
     document.getElementById("charCount").textContent = text.length;
 }
+function videoReadyMessage() {
+    document.getElementById("videoStatus").textContent = "🎬 Video ready to play!";
+}
+
+window.onbeforeunload = function () {
+    const name = document.getElementById("name")?.value;
+    const email = document.getElementById("email")?.value;
+    const message = document.getElementById("message")?.value;
+    if (name || email || message) {
+        return "You have unsaved changes. Are you sure you want to leave?";
+    }
+};
+
+
+function savePreference() {
+    const selectedEvent = document.getElementById("eventSelect").value;
+    localStorage.setItem("preferredEvent", selectedEvent);
+}
+
+
+window.onload = function () {
+    const savedEvent = localStorage.getItem("preferredEvent");
+    if (savedEvent) {
+        document.getElementById("eventSelect").value = savedEvent;
+        showFee(); // update fee display too
+    }
+};
+
+
+function clearPreferences() {
+    localStorage.clear();
+    sessionStorage.clear();
+    alert("Preferences cleared!");
+    document.getElementById("eventSelect").value = "";
+    document.getElementById("feeDisplay").textContent = "";
+}

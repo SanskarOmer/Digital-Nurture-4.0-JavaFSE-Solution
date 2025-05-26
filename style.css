@@ -119,24 +119,57 @@ output {
   margin-top: 10px;
   text-align: center;
 }
-
-#feedbackForm {
-  background-color: #eef3f7;
+#feedback {
+  background-color: #f9f9f9;
   padding: 20px;
-  border: 1px solid #ccd;
+  margin-top: 30px;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  margin: 30px auto;
-  max-width: 500px;
 }
 
 #feeDisplay,
 #confirmationText {
-  color: #004080;
   font-weight: bold;
+  color: #2a7f2a;
+}
+
+#charCount {
+  font-weight: bold;
+  color: #555;
 }
 
 #eventImg {
-  margin-top: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+#videoInvite {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #eef6ff;
+  border: 1px solid #cce0f0;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#videoStatus {
+  color: #2a7f2a;
+  font-weight: bold;
+  margin-top: 10px;
+}
+#eventSelect,
+button {
+  margin-top: 10px;
+}
+
+button {
+  padding: 6px 12px;
+  background-color: #e03e3e;
+  color: white;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
-  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #c12e2e;
 }

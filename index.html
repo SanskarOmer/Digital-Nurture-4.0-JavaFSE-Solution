@@ -101,7 +101,7 @@
           /><br /><br />
 
           <label for="eventSelect">Select Event:</label><br />
-          <select id="eventSelect" onchange="showFee()">
+          <select id="eventSelect" onchange="showFee(); savePreference();">
             <option value="">--Choose Event--</option>
             <option value="picnic">Community Picnic</option>
             <option value="run">Charity Run</option>
@@ -110,8 +110,16 @@
           <p id="feeDisplay"></p>
           <br />
 
-          <label for="
-          dback">Your Feedback:</label><br />
+          <!-- 🆕 Clear Preferences Button -->
+          <button type="button" onclick="clearPreferences()">
+            Clear Preferences
+          </button>
+
+          <label
+            for="
+          dback"
+            >Your Feedback:</label
+          ><br />
           <textarea
             id="feedbackText"
             onkeyup="countChars()"
@@ -179,6 +187,19 @@
         </tr>
       </table>
     </main>
+    <section id="videoInvite">
+      <h2>You're Invited!</h2>
+      <video
+        id="promoVideo"
+        width="480"
+        controls
+        oncanplay="videoReadyMessage()"
+      >
+        <source src="event-promo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <p id="videoStatus"></p>
+    </section>
 
     <!-- Footer -->
     <footer>
