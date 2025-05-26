@@ -90,3 +90,46 @@ function clearPreferences() {
     document.getElementById("eventSelect").value = "";
     document.getElementById("feeDisplay").textContent = "";
 }
+
+function findLocation() {
+    const result = document.getElementById("locationResult");
+
+    if (!navigator.geolocation) {
+        result.textContent = "Geolocation is not supported by your browser.";
+        return;
+    }
+
+    result.textContent = "Locating...";
+
+    navigator.geolocation.getCurrentPosition(
+        // Success callback
+        function (position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            result.textContent = `📍 Your location: Latitude ${latitude}, Longitude ${longitude}`;
+        },
+        // Error callback
+        function (error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    result.textContent = "❌ Permission denied. Please allow location access.";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    result.textContent = "❌ Location info is unavailable.";
+                    break;
+                case error.TIMEOUT:
+                    result.textContent = "⏱️ Request timed out. Try again.";
+                    break;
+                default:
+                    result.textContent = "❌ An unknown error occurred.";
+                    break;
+            }
+        },
+      
+        {
+            enableHighAccuracy: true,
+            timeout: 10000,
+            maximumAge: 0
+        }
+    );
+}

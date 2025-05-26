@@ -173,3 +173,30 @@ button {
 button:hover {
   background-color: #c12e2e;
 }
+#locationSection {
+  background-color: #fff4e6;
+  padding: 20px;
+  margin-top: 30px;
+  border: 1px solid #ffd8a8;
+  border-radius: 8px;
+}
+
+#locationSection button {
+  padding: 8px 14px;
+  background-color: #ff922b;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#locationSection button:hover {
+  background-color: #f76707;
+}
+
+#locationResult {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+}
